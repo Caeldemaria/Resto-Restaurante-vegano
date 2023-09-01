@@ -60,12 +60,4 @@ console.log(`item ${id} Retirado`)
 }
 
 
-
-pedido('cafe-1')
-pedido('cafe-2')
-pedido('almoco-1')
-pedido('almoco-1')
-
-
-
 console.log('itensClicados:', itensClicados)
