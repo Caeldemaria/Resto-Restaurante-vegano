@@ -14,7 +14,7 @@ function carrossel() {
 }
 
 function showBtnTop() {
-    //let scroll = document.documentElement.scroll
+    let scroll = document.documentElement.scroll
     let scroll = window.pageYOffset
     console.log(scroll);
     let menu = document.querySelector('#voltarAoTopo')
@@ -44,3 +44,28 @@ modoCor.addEventListener('change', async () => {
 
     }
 })
+const itensClicados=[]
+
+function pedido(id){
+    const index=itensClicados.indexOf(id)
+if (index===-1){
+    itensClicados.push(id)
+console.log(`item ${id} adcionado com sucesso`)
+}
+
+else{
+    itensClicados.splice(index,1)
+console.log(`item ${id} Retirado`)
+}
+}
+
+
+
+pedido('cafe-1')
+pedido('cafe-2')
+pedido('almoco-1')
+pedido('almoco-1')
+
+
+
+console.log('itensClicados:', itensClicados)
